@@ -214,6 +214,7 @@ if tog2_2:
     df = pd.read_csv('https://gist.githubusercontent.com/rsimmon/0976aaa89f28973a5062/raw/6040a99f831673ecc62aff639e7d442346870d29/enso_mei_2000.csv')
     st.markdown("**최근 15년 간 ENSO 수치**")
     fig = px.line(df,x = "Year",y="ENSO_Index")
+    fig.update_layout(xaxis = {'side' : 'top'})
     st.plotly_chart(fig)
     st.markdown('**:grey[참고)]**:grey[일반적으로 1.0 이상은 라니냐, -1.0 이하는 엘니뇨 시기로 판단한다.]')
     st.dataframe(df)
